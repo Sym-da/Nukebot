@@ -5,9 +5,9 @@ import time
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = commands.Bot(command_prefix = ".", intents=intents)
+bot = commands.Bot(command_prefix = "!nuke", intents=intents)
 
-@bot.command()
+@bot.command(!nuke)
 async def reclone(ctx):
   for channel in ctx.guild.text_channels:
       time.sleep(0.2)
