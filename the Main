@@ -3,7 +3,7 @@ from discord.ext import commands
 import asyncio
 import os
 
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = os.getenv("MTM3Njg4NjExOTUwNDkzNzA0Mw.GwxHaF.0WL3lbJ6k5aVhW1bphj0rKALEOOpxxwRCQqils")
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
