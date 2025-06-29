@@ -6,7 +6,7 @@ import os
 TOKEN = os.getenv("DISCORD TOKEN")
 
 intents = discord.Intents.all()
-bot = commands.Bot(command_prefix="!", intents=intents)
+bot = commands.Bot(command_prefix="!xemon", intents=intents)
 
 荒らし文 = (
     "@everyone @here\n"
